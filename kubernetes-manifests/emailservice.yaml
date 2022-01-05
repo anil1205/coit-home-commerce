@@ -31,7 +31,7 @@ spec:
       - name: deploy-pull-harbor
       containers:
       - name: server
-        image: emailservice
+        image: gcr.io/virtual-limiter-336512/emailservice
         ports:
         - containerPort: 8080
         env:
