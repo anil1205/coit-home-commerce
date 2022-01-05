@@ -30,7 +30,7 @@ spec:
       - name: deploy-pull-harbor
       containers:
       - name: server
-        image: shippingservice
+        image: gcr.io/virtual-limiter-336512/shippingservice
         ports:
         - containerPort: 50051
         env:
@@ -51,13 +51,6 @@ spec:
         livenessProbe:
           exec:
             command: ["/bin/grpc_health_probe", "-addr=:50051"]
-        resources:
-          requests:
-            cpu: 100m
-            memory: 64Mi
-          limits:
-            cpu: 200m
-            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
