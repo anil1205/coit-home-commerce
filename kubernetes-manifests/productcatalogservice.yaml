@@ -31,7 +31,7 @@ spec:
       - name: deploy-pull-harbor
       containers:
       - name: server
-        image: productcatalogservice
+        image: gcr.io/virtual-limiter-336512/productcatalogservice
         ports:
         - containerPort: 3550
         env:
